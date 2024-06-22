@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+
+    <script>
+        function changeLang(lang) {
+            if (lang === 'es') {
+                window.location.href = 'spanish.html';
+            } else if(lang === 'en') {
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
     <!--Scale logo-->
     <link rel="apple-touch-icon" sizes="57x57" href="Assets/images/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="Assets/images/favicon/apple-icon-60x60.png">
@@ -17,9 +27,11 @@
     <link rel="icon" type="image/png" sizes="96x96" href="Assets/images/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="Assets/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="Assets/images/favicon/manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    
 
     <!--Characters-->
     <meta charset="utf-8">
@@ -54,8 +66,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
-    <!--Tittle-->
+    <!--Title-->
     <title>BuildSphere</title>
+
 </head>
 <body>
 <header>
@@ -82,6 +95,13 @@
                     <li class="nav-item px-3">
                         <a class="nav-link" href="#ContactUs">Contact Us</a>
                     </li>
+                    <li class="nav-item nav-item-dropdowm px-3">
+                        <label class="language" for="lang">Choose a language: </label>
+                        <select class="lang-dropdown" name="lang" id="lang" onchange="changeLang(this.value)">
+                            <option value="en">English</option>
+                            <option value="es">Spanish</option>
+                        </select>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -91,42 +111,28 @@
     <div class="banner">
         <div class="banner-right-side">
             <div class="text-button-banner">
-                <p>Transform the way you manage
-                    your construction projects. BuildSphere
-                    offers you intuitive digital tools and
-                    efficient to optimize each stage of the process.</p>
+                <p>Transform the way you manage your construction projects. BuildSphere offers you intuitive digital tools and efficient to optimize each stage of the process.</p>
                 <div>
-                    <a href="#ContactUs" class="btn-no-link">
-                    <button type="button" class="btn-buildsphere">Let's Start</button>
-                    </a>
-
-                    <a href="#about-us" class="btn-no-link">
-                    <button type="button" class="btn-buildsphere">Know more</button>
-                    </a>
+                    <a href="#ContactUs" class="btn-no-link"><button type="button" class="btn-buildsphere">Let's Start</button></a>
+                    <a href="#about-us" class="btn-no-link"><button type="button" class="btn-buildsphere">Know more</button></a>
                 </div>
             </div>
         </div>
         <div class="banner-left-side">
-            <img class="img-fluid d-block principal-banner" src="Assets/images/Banner.jpg" alt="Banner">
+            <video class="img-fluid d-block principal-banner" src="./Assets/videos/product-openSource.mp4" autoplay muted loop></video>
         </div>
     </div>
 </header>
-
 <main>
-    <!--About us -->
+    <!-- About us -->
     <div class="about-us" id="about-us">
-        <div class="about-us-header">
-            <h1>About us</h1>
-        </div>
+        <div class="about-us-header"><h1>About us</h1></div>
         <div class="about-us-content">
-            <div class = "about-us-image">
-                <img src="./Assets/images/Video.jpg" alt="Representative Image about BuildSphere">
+            <div class="about-us-image">
+                <video src="Assets/videos/team-openSource.mp4" controls></video>
             </div>
             <div class="about-us-text">
-                <p>BuildSphere is a software product that is dedicated to transforming the
-                    construction industry through technological innovation. Our mission is to provide
-                    our customers with the tools they need to optimize their processes, increase efficiency
-                    , and achieve better results.</p>
+                <p>BuildSphere is a software product that is dedicated to transforming the construction industry through technological innovation. Our mission is to provide our customers with the tools they need to optimize their processes, increase efficiency, and achieve better results.</p>
             </div>
         </div>
     </div>
@@ -257,26 +263,22 @@
         </div>
     </div>
 
-
-
-
 </main>
 
 <footer>
-    <div class="footer">
-        <div class="footer-content">
-            <div class="footer-content-text">
-                <p>©copytight 2024 - Todos los derechos reservados- BrainWave.</p>
-                <p> Politica de privacidad </p>
-            </div>
-            <div class="footer-content-social">
-                <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
-                <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
-                <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
-                <a href=""><ion-icon name="logo-youtube"></ion-icon></a>
-            </div>
+    <div class="footer-content">
+        <div class="legal-info">Legal Information</div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
+        <div class="privacy-policy">Privacy Politic</div>
     </div>
+    <hr>
+    <div>Copyright© 2024 BrainWave</div>
+
 </footer>
 </body>
 </html>
